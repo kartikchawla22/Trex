@@ -7,18 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052F9422290B9AF100E3E5D6 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F9420290B9AF100E3E5D6 /* NotificationsManager.swift */; };
+		052F9424290B9B1A00E3E5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */; };
 		05C6BA95290B007100FE5659 /* TrexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BA94290B007100FE5659 /* TrexApp.swift */; };
 		05C6BA97290B007100FE5659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BA96290B007100FE5659 /* ContentView.swift */; };
 		05C6BA99290B007100FE5659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C6BA98290B007100FE5659 /* Assets.xcassets */; };
 		05C6BA9C290B007100FE5659 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C6BA9B290B007100FE5659 /* Preview Assets.xcassets */; };
+		05C6BAA3290B012D00FE5659 /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BAA2290B012D00FE5659 /* Pedometer.swift */; };
+		05C6BAAB290B140100FE5659 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C6BAAA290B140100FE5659 /* WidgetKit.framework */; };
+		05C6BAAD290B140100FE5659 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C6BAAC290B140100FE5659 /* SwiftUI.framework */; };
+		05C6BAB0290B140100FE5659 /* Trex_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BAAF290B140100FE5659 /* Trex_Widget.swift */; };
+		05C6BAB3290B140200FE5659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C6BAB2290B140200FE5659 /* Assets.xcassets */; };
+		05C6BAB5290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */; };
+		05C6BAB6290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */; };
+		05C6BAB9290B140200FE5659 /* Trex_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 05C6BAA8290B140100FE5659 /* Trex_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		05C6BAB7290B140200FE5659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05C6BA89290B007100FE5659 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05C6BAA7290B140100FE5659;
+			remoteInfo = Trex_WidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05C6BABD290B140200FE5659 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				05C6BAB9290B140200FE5659 /* Trex_WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		052F9420290B9AF100E3E5D6 /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		052F9426290BA47A00E3E5D6 /* Trex_WidgetExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Trex_WidgetExtension.entitlements; sourceTree = "<group>"; };
+		052F9427290BA48900E3E5D6 /* Trex.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Trex.entitlements; sourceTree = "<group>"; };
 		05C6BA91290B007100FE5659 /* Trex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C6BA94290B007100FE5659 /* TrexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrexApp.swift; sourceTree = "<group>"; };
 		05C6BA96290B007100FE5659 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05C6BA98290B007100FE5659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C6BA9B290B007100FE5659 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05C6BAA2290B012D00FE5659 /* Pedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
+		05C6BAA8290B140100FE5659 /* Trex_WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Trex_WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C6BAAA290B140100FE5659 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		05C6BAAC290B140100FE5659 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		05C6BAAF290B140100FE5659 /* Trex_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trex_Widget.swift; sourceTree = "<group>"; };
+		05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Trex_Widget.intentdefinition; sourceTree = "<group>"; };
+		05C6BAB2290B140200FE5659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05C6BAB4290B140200FE5659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,13 +75,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05C6BAA5290B140100FE5659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C6BAAD290B140100FE5659 /* SwiftUI.framework in Frameworks */,
+				05C6BAAB290B140100FE5659 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		05C6BA88290B007100FE5659 = {
 			isa = PBXGroup;
 			children = (
+				052F9426290BA47A00E3E5D6 /* Trex_WidgetExtension.entitlements */,
 				05C6BA93290B007100FE5659 /* Trex */,
+				05C6BAAE290B140100FE5659 /* Trex_Widget */,
+				05C6BAA9290B140100FE5659 /* Frameworks */,
 				05C6BA92290B007100FE5659 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				05C6BA91290B007100FE5659 /* Trex.app */,
+				05C6BAA8290B140100FE5659 /* Trex_WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +110,14 @@
 		05C6BA93290B007100FE5659 /* Trex */ = {
 			isa = PBXGroup;
 			children = (
+				052F9427290BA48900E3E5D6 /* Trex.entitlements */,
 				05C6BA94290B007100FE5659 /* TrexApp.swift */,
 				05C6BA96290B007100FE5659 /* ContentView.swift */,
+				052F9420290B9AF100E3E5D6 /* NotificationsManager.swift */,
 				05C6BA98290B007100FE5659 /* Assets.xcassets */,
 				05C6BA9A290B007100FE5659 /* Preview Content */,
+				05C6BAA2290B012D00FE5659 /* Pedometer.swift */,
+				052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */,
 			);
 			path = Trex;
 			sourceTree = "<group>";
@@ -67,6 +130,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		05C6BAA9290B140100FE5659 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05C6BAAA290B140100FE5659 /* WidgetKit.framework */,
+				05C6BAAC290B140100FE5659 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05C6BAAE290B140100FE5659 /* Trex_Widget */ = {
+			isa = PBXGroup;
+			children = (
+				05C6BAAF290B140100FE5659 /* Trex_Widget.swift */,
+				05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */,
+				05C6BAB2290B140200FE5659 /* Assets.xcassets */,
+				05C6BAB4290B140200FE5659 /* Info.plist */,
+			);
+			path = Trex_Widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +160,34 @@
 				05C6BA8D290B007100FE5659 /* Sources */,
 				05C6BA8E290B007100FE5659 /* Frameworks */,
 				05C6BA8F290B007100FE5659 /* Resources */,
+				05C6BABD290B140200FE5659 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				05C6BAB8290B140200FE5659 /* PBXTargetDependency */,
 			);
 			name = Trex;
 			productName = Trex;
 			productReference = 05C6BA91290B007100FE5659 /* Trex.app */;
 			productType = "com.apple.product-type.application";
+		};
+		05C6BAA7290B140100FE5659 /* Trex_WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05C6BABA290B140200FE5659 /* Build configuration list for PBXNativeTarget "Trex_WidgetExtension" */;
+			buildPhases = (
+				05C6BAA4290B140100FE5659 /* Sources */,
+				05C6BAA5290B140100FE5659 /* Frameworks */,
+				05C6BAA6290B140100FE5659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Trex_WidgetExtension;
+			productName = Trex_WidgetExtension;
+			productReference = 05C6BAA8290B140100FE5659 /* Trex_WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +200,9 @@
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					05C6BA90290B007100FE5659 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					05C6BAA7290B140100FE5659 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
@@ -116,6 +221,7 @@
 			projectRoot = "";
 			targets = (
 				05C6BA90290B007100FE5659 /* Trex */,
+				05C6BAA7290B140100FE5659 /* Trex_WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +236,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05C6BAA6290B140100FE5659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C6BAB3290B140200FE5659 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +251,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052F9424290B9B1A00E3E5D6 /* AppDelegate.swift in Sources */,
 				05C6BA97290B007100FE5659 /* ContentView.swift in Sources */,
+				052F9422290B9AF100E3E5D6 /* NotificationsManager.swift in Sources */,
 				05C6BA95290B007100FE5659 /* TrexApp.swift in Sources */,
+				05C6BAA3290B012D00FE5659 /* Pedometer.swift in Sources */,
+				05C6BAB6290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C6BAA4290B140100FE5659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C6BAB0290B140100FE5659 /* Trex_Widget.swift in Sources */,
+				05C6BAB5290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05C6BAB8290B140200FE5659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05C6BAA7290B140100FE5659 /* Trex_WidgetExtension */;
+			targetProxy = 05C6BAB7290B140200FE5659 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		05C6BA9D290B007100FE5659 /* Debug */ = {
@@ -262,19 +397,23 @@
 		05C6BAA0290B007100FE5659 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Trex/Trex.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trex/Preview Content\"";
 				DEVELOPMENT_TEAM = 3FMH93SKHT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "This App requires to access motion access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,28 +421,36 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.kartikchawla.Trex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		05C6BAA1290B007100FE5659 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Trex/Trex.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trex/Preview Content\"";
 				DEVELOPMENT_TEAM = 3FMH93SKHT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "This App requires to access motion access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +458,73 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.kartikchawla.Trex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		05C6BABB290B140200FE5659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Trex_WidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FMH93SKHT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trex_Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Trex_Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.kartikchawla.Trex.Trex-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		05C6BABC290B140200FE5659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Trex_WidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3FMH93SKHT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Trex_Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Trex_Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net.kartikchawla.Trex.Trex-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -334,6 +545,15 @@
 			buildConfigurations = (
 				05C6BAA0290B007100FE5659 /* Debug */,
 				05C6BAA1290B007100FE5659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05C6BABA290B140200FE5659 /* Build configuration list for PBXNativeTarget "Trex_WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C6BABB290B140200FE5659 /* Debug */,
+				05C6BABC290B140200FE5659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

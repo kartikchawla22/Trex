@@ -6,16 +6,14 @@
 //
 
 import SwiftUI
+import CoreMotion
 
 struct ContentView: View {
+    @ObservedObject var pedometerController = PedometerController()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Hello, world! \(pedometerController.steps)")
         }
-        .padding()
     }
 }
 
