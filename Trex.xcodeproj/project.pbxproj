@@ -22,10 +22,10 @@
 		05C6BAB6290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */; };
 		05C6BAB9290B140200FE5659 /* Trex_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 05C6BAA8290B140100FE5659 /* Trex_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E032383B290DB57300EFD02F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E032383A290DB57300EFD02F /* LoginView.swift */; };
-		E095314F290DCE2200154D3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E095314E290DCE2200154D3C /* GoogleService-Info.plist */; };
 		E0953152290DCE6400154D3C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E0953151290DCE6400154D3C /* FirebaseAnalytics */; };
 		E0953154290DCE6400154D3C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E0953153290DCE6400154D3C /* FirebaseAuth */; };
 		E0953156290DCE6400154D3C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E0953155290DCE6400154D3C /* FirebaseDatabase */; };
+		E0953158290F68C500154D3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0953157290F68C500154D3C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 		05C6BAB2290B140200FE5659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C6BAB4290B140200FE5659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E032383A290DB57300EFD02F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E095314E290DCE2200154D3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0953157290F68C500154D3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,6 @@
 		05C6BA88290B007100FE5659 = {
 			isa = PBXGroup;
 			children = (
-				E0953146290DCCB000154D3C /* firebase */,
 				052F9426290BA47A00E3E5D6 /* Trex_WidgetExtension.entitlements */,
 				E0323835290D9A4700EFD02F /* Authentication */,
 				05C6BA93290B007100FE5659 /* Trex */,
@@ -123,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				052F9427290BA48900E3E5D6 /* Trex.entitlements */,
+				E0953157290F68C500154D3C /* GoogleService-Info.plist */,
 				05C6BA94290B007100FE5659 /* TrexApp.swift */,
 				05C6BA96290B007100FE5659 /* ContentView.swift */,
 				052F9420290B9AF100E3E5D6 /* NotificationsManager.swift */,
@@ -130,7 +130,6 @@
 				05C6BA9A290B007100FE5659 /* Preview Content */,
 				05C6BAA2290B012D00FE5659 /* Pedometer.swift */,
 				052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */,
-				E095314E290DCE2200154D3C /* GoogleService-Info.plist */,
 			);
 			path = Trex;
 			sourceTree = "<group>";
@@ -169,13 +168,6 @@
 				E032383A290DB57300EFD02F /* LoginView.swift */,
 			);
 			path = Authentication;
-			sourceTree = "<group>";
-		};
-		E0953146290DCCB000154D3C /* firebase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +261,7 @@
 			files = (
 				05C6BA9C290B007100FE5659 /* Preview Assets.xcassets in Resources */,
 				05C6BA99290B007100FE5659 /* Assets.xcassets in Resources */,
-				E095314F290DCE2200154D3C /* GoogleService-Info.plist in Resources */,
+				E0953158290F68C500154D3C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
