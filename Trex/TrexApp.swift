@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 @main
 struct TrexApp: App {
     //MARK: -  Application Delegate Adaptor
@@ -23,9 +24,14 @@ struct TrexApp: App {
         NotificationsManager.generateNotification(title: "This is notification", description: "This is morning 8 am notification")
     }
     
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           let viewModel = AppviewModel()
+            LoginView()
+             .environmentObject(viewModel)
+            
         }
     }
 }
