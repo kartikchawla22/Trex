@@ -28,10 +28,7 @@ struct TrexApp: App {
     
     var body: some Scene {
         WindowGroup {
-           let viewModel = AppviewModel()
-            LoginView()
-             .environmentObject(viewModel)
-            
+            SplashScreenView()
         }
     }
 }

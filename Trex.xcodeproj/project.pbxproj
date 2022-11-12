@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		052F9422290B9AF100E3E5D6 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F9420290B9AF100E3E5D6 /* NotificationsManager.swift */; };
 		052F9424290B9B1A00E3E5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */; };
+		0541F4A9290F6B1800B7A902 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0541F4A8290F6B1800B7A902 /* GoogleService-Info.plist */; };
+		0592AF59291F1D5C0076908F /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF58291F1D5C0076908F /* SplashScreenView.swift */; };
+		0592AF5B291F28D20076908F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF5A291F28D20076908F /* AuthViewModel.swift */; };
+		0592AF5E291F2AEC0076908F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF5D291F2AEC0076908F /* HomeView.swift */; };
+		0592AF61291F30860076908F /* ComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF60291F30860076908F /* ComponentsView.swift */; };
+		0592AF63291F61F20076908F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF62291F61F20076908F /* SignupView.swift */; };
+		0592AF65291F62AE0076908F /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF64291F62AE0076908F /* SigninView.swift */; };
+		0592AF68291F69380076908F /* SetGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF67291F69380076908F /* SetGoalView.swift */; };
+		0592AF6B291F6F190076908F /* TrackStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF6A291F6F190076908F /* TrackStepsView.swift */; };
 		05C6BA95290B007100FE5659 /* TrexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BA94290B007100FE5659 /* TrexApp.swift */; };
 		05C6BA97290B007100FE5659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BA96290B007100FE5659 /* ContentView.swift */; };
 		05C6BA99290B007100FE5659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C6BA98290B007100FE5659 /* Assets.xcassets */; };
@@ -21,11 +30,10 @@
 		05C6BAB5290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */; };
 		05C6BAB6290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */; };
 		05C6BAB9290B140200FE5659 /* Trex_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 05C6BAA8290B140100FE5659 /* Trex_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E032383B290DB57300EFD02F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E032383A290DB57300EFD02F /* LoginView.swift */; };
+		E032383B290DB57300EFD02F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E032383A290DB57300EFD02F /* AuthView.swift */; };
 		E0953152290DCE6400154D3C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E0953151290DCE6400154D3C /* FirebaseAnalytics */; };
 		E0953154290DCE6400154D3C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E0953153290DCE6400154D3C /* FirebaseAuth */; };
 		E0953156290DCE6400154D3C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E0953155290DCE6400154D3C /* FirebaseDatabase */; };
-		E0953158290F68C500154D3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0953157290F68C500154D3C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +65,15 @@
 		052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		052F9426290BA47A00E3E5D6 /* Trex_WidgetExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Trex_WidgetExtension.entitlements; sourceTree = "<group>"; };
 		052F9427290BA48900E3E5D6 /* Trex.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Trex.entitlements; sourceTree = "<group>"; };
+		0541F4A8290F6B1800B7A902 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0592AF58291F1D5C0076908F /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		0592AF5A291F28D20076908F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		0592AF5D291F2AEC0076908F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0592AF60291F30860076908F /* ComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsView.swift; sourceTree = "<group>"; };
+		0592AF62291F61F20076908F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		0592AF64291F62AE0076908F /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		0592AF67291F69380076908F /* SetGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalView.swift; sourceTree = "<group>"; };
+		0592AF6A291F6F190076908F /* TrackStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackStepsView.swift; sourceTree = "<group>"; };
 		05C6BA91290B007100FE5659 /* Trex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C6BA94290B007100FE5659 /* TrexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrexApp.swift; sourceTree = "<group>"; };
 		05C6BA96290B007100FE5659 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,8 +87,7 @@
 		05C6BAB1290B140100FE5659 /* Trex_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Trex_Widget.intentdefinition; sourceTree = "<group>"; };
 		05C6BAB2290B140200FE5659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C6BAB4290B140200FE5659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E032383A290DB57300EFD02F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E0953157290F68C500154D3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E032383A290DB57300EFD02F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +113,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0592AF5C291F2ADD0076908F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0592AF5D291F2AEC0076908F /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0592AF5F291F30780076908F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0592AF60291F30860076908F /* ComponentsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0592AF66291F69230076908F /* SetGoal */ = {
+			isa = PBXGroup;
+			children = (
+				0592AF67291F69380076908F /* SetGoalView.swift */,
+			);
+			path = SetGoal;
+			sourceTree = "<group>";
+		};
+		0592AF69291F6EFC0076908F /* TrackSteps */ = {
+			isa = PBXGroup;
+			children = (
+				0592AF6A291F6F190076908F /* TrackStepsView.swift */,
+			);
+			path = TrackSteps;
+			sourceTree = "<group>";
+		};
 		05C6BA88290B007100FE5659 = {
 			isa = PBXGroup;
 			children = (
 				052F9426290BA47A00E3E5D6 /* Trex_WidgetExtension.entitlements */,
-				E0323835290D9A4700EFD02F /* Authentication */,
 				05C6BA93290B007100FE5659 /* Trex */,
 				05C6BAAE290B140100FE5659 /* Trex_Widget */,
 				05C6BAA9290B140100FE5659 /* Frameworks */,
@@ -121,8 +168,13 @@
 		05C6BA93290B007100FE5659 /* Trex */ = {
 			isa = PBXGroup;
 			children = (
+				0592AF69291F6EFC0076908F /* TrackSteps */,
+				0592AF66291F69230076908F /* SetGoal */,
+				0592AF5F291F30780076908F /* Components */,
+				0592AF5C291F2ADD0076908F /* Home */,
+				E0323835290D9A4700EFD02F /* Authentication */,
 				052F9427290BA48900E3E5D6 /* Trex.entitlements */,
-				E0953157290F68C500154D3C /* GoogleService-Info.plist */,
+				0541F4A8290F6B1800B7A902 /* GoogleService-Info.plist */,
 				05C6BA94290B007100FE5659 /* TrexApp.swift */,
 				05C6BA96290B007100FE5659 /* ContentView.swift */,
 				052F9420290B9AF100E3E5D6 /* NotificationsManager.swift */,
@@ -130,6 +182,7 @@
 				05C6BA9A290B007100FE5659 /* Preview Content */,
 				05C6BAA2290B012D00FE5659 /* Pedometer.swift */,
 				052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */,
+				0592AF58291F1D5C0076908F /* SplashScreenView.swift */,
 			);
 			path = Trex;
 			sourceTree = "<group>";
@@ -165,7 +218,10 @@
 		E0323835290D9A4700EFD02F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				E032383A290DB57300EFD02F /* LoginView.swift */,
+				E032383A290DB57300EFD02F /* AuthView.swift */,
+				0592AF5A291F28D20076908F /* AuthViewModel.swift */,
+				0592AF62291F61F20076908F /* SignupView.swift */,
+				0592AF64291F62AE0076908F /* SigninView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -261,7 +317,7 @@
 			files = (
 				05C6BA9C290B007100FE5659 /* Preview Assets.xcassets in Resources */,
 				05C6BA99290B007100FE5659 /* Assets.xcassets in Resources */,
-				E0953158290F68C500154D3C /* GoogleService-Info.plist in Resources */,
+				0541F4A9290F6B1800B7A902 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,13 +336,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0592AF63291F61F20076908F /* SignupView.swift in Sources */,
+				0592AF61291F30860076908F /* ComponentsView.swift in Sources */,
+				0592AF65291F62AE0076908F /* SigninView.swift in Sources */,
 				052F9424290B9B1A00E3E5D6 /* AppDelegate.swift in Sources */,
-				E032383B290DB57300EFD02F /* LoginView.swift in Sources */,
+				E032383B290DB57300EFD02F /* AuthView.swift in Sources */,
 				05C6BA97290B007100FE5659 /* ContentView.swift in Sources */,
+				0592AF68291F69380076908F /* SetGoalView.swift in Sources */,
+				0592AF5E291F2AEC0076908F /* HomeView.swift in Sources */,
 				052F9422290B9AF100E3E5D6 /* NotificationsManager.swift in Sources */,
 				05C6BA95290B007100FE5659 /* TrexApp.swift in Sources */,
+				0592AF6B291F6F190076908F /* TrackStepsView.swift in Sources */,
 				05C6BAA3290B012D00FE5659 /* Pedometer.swift in Sources */,
 				05C6BAB6290B140200FE5659 /* Trex_Widget.intentdefinition in Sources */,
+				0592AF59291F1D5C0076908F /* SplashScreenView.swift in Sources */,
+				0592AF5B291F28D20076908F /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
