@@ -39,6 +39,9 @@ class AuthViewModel: ObservableObject {
             }
         }
     }
+    func getUser() -> User {
+        return auth.currentUser!
+    }
     
     func signOut () {
         try? auth.signOut ()

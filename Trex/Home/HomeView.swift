@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @ObservedObject var pedometerController = PedometerController()
+    @State private var intialStepsGoals = 5000
 
     var body: some View {
         VStack {

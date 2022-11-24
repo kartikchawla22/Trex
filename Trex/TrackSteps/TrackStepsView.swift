@@ -22,20 +22,28 @@ struct TrackStepsView: View {
         StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
         StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
         StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
-        StepsIdentifiable(date: .now, steps: "5000", goal: "5000")
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
+        StepsIdentifiable(date: .now, steps: "5000", goal: "5000"),
     ]
-
+    
+    
     var body: some View {
         VStack {
-            WelcomeTextView()
-            
             List(arr) {
                 _ in TrackStepsCell()
             }
+            .navigationBarTitle("Tracking")
         }
     }
 }
-
 struct TrackStepsView_Previews: PreviewProvider {
     static var previews: some View {
         TrackStepsView()

@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ComponentsView: View {
+    @State private var text = "hello"
     var body: some View {
         VStack {
-            WelcomeTextView()
+            WelcomeTextView(text: $text)
             LogoImageView()
         }
         .padding()
@@ -37,8 +38,9 @@ struct LogoImageView: View {
 }
 
 struct WelcomeTextView: View {
+    @Binding var text: String
     var body: some View {
-        Text("Welcome!")
+        Text(text)
             .font(.largeTitle)
             .fontWeight(.semibold)
             .padding(.bottom, 20)
@@ -49,18 +51,24 @@ struct TrackStepsCell: View {
     var body: some View {
         VStack{
             HStack {
-                Text(Date.now, style: .date)
-                Divider()
-                Spacer()
-                Text("5000")
-                Divider()
-                Spacer()
-                Text("5000")
+                Group {
+                    Text(Date.now, style: .date).multilineTextAlignment(.center)
+                    Spacer()
+                    Divider()
+                }
+                Group {
+                    Spacer()
+                    Text("5000").multilineTextAlignment(.center)
+                    Spacer()
+                    Divider()
+                }
+                Group {
+                    Spacer()
+                    Text("5000").multilineTextAlignment(.center)
+                    Spacer()
+                }
             }
-            .padding()
-            .padding(.leading, 10)
-            .padding(.trailing, 10)
-        }.padding(10)
+        }
     }
 }
 struct StepsIdentifiable: Identifiable {

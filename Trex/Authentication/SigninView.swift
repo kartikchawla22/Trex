@@ -10,12 +10,13 @@ import SwiftUI
 struct SigninView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var heading = "Welcome"
     
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
-            WelcomeTextView()
+            WelcomeTextView(text: $heading)
             LogoImageView()
             VStack {
                 TextField("Email Address", text: $email)
