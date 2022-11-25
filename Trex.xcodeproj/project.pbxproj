@@ -10,11 +10,11 @@
 		052F9422290B9AF100E3E5D6 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F9420290B9AF100E3E5D6 /* NotificationsManager.swift */; };
 		052F9424290B9B1A00E3E5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */; };
 		0541F4A9290F6B1800B7A902 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0541F4A8290F6B1800B7A902 /* GoogleService-Info.plist */; };
+		056B751829306A2E0027596F /* FireStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056B751729306A2E0027596F /* FireStoreController.swift */; };
 		05903D81292C273200E5885C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 05903D80292C273200E5885C /* FirebaseAuth */; };
 		05903D83292C273200E5885C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 05903D82292C273200E5885C /* FirebaseDatabase */; };
 		05903D85292C273200E5885C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 05903D84292C273200E5885C /* FirebaseFirestore */; };
 		05903D87292C273200E5885C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05903D86292C273200E5885C /* FirebaseFirestoreSwift */; };
-		05903D89292C802900E5885C /* SetGoalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05903D88292C802900E5885C /* SetGoalController.swift */; };
 		0592AF59291F1D5C0076908F /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF58291F1D5C0076908F /* SplashScreenView.swift */; };
 		0592AF5B291F28D20076908F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF5A291F28D20076908F /* AuthViewModel.swift */; };
 		0592AF5E291F2AEC0076908F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592AF5D291F2AEC0076908F /* HomeView.swift */; };
@@ -68,7 +68,7 @@
 		052F9426290BA47A00E3E5D6 /* Trex_WidgetExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Trex_WidgetExtension.entitlements; sourceTree = "<group>"; };
 		052F9427290BA48900E3E5D6 /* Trex.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Trex.entitlements; sourceTree = "<group>"; };
 		0541F4A8290F6B1800B7A902 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		05903D88292C802900E5885C /* SetGoalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalController.swift; sourceTree = "<group>"; };
+		056B751729306A2E0027596F /* FireStoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreController.swift; sourceTree = "<group>"; };
 		0592AF58291F1D5C0076908F /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		0592AF5A291F28D20076908F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0592AF5D291F2AEC0076908F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				0592AF67291F69380076908F /* SetGoalView.swift */,
-				05903D88292C802900E5885C /* SetGoalController.swift */,
 			);
 			path = SetGoal;
 			sourceTree = "<group>";
@@ -188,6 +187,7 @@
 				05C6BAA2290B012D00FE5659 /* Pedometer.swift */,
 				052F9423290B9B1A00E3E5D6 /* AppDelegate.swift */,
 				0592AF58291F1D5C0076908F /* SplashScreenView.swift */,
+				056B751729306A2E0027596F /* FireStoreController.swift */,
 			);
 			path = Trex;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 				0592AF65291F62AE0076908F /* SigninView.swift in Sources */,
 				052F9424290B9B1A00E3E5D6 /* AppDelegate.swift in Sources */,
 				E032383B290DB57300EFD02F /* AuthView.swift in Sources */,
-				05903D89292C802900E5885C /* SetGoalController.swift in Sources */,
+				056B751829306A2E0027596F /* FireStoreController.swift in Sources */,
 				05C6BA97290B007100FE5659 /* ContentView.swift in Sources */,
 				0592AF68291F69380076908F /* SetGoalView.swift in Sources */,
 				0592AF5E291F2AEC0076908F /* HomeView.swift in Sources */,

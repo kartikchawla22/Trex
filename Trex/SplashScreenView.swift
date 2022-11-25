@@ -11,6 +11,7 @@ struct SplashScreenView: View {
     @State private var isMainViewActive = false
     @State private var size = 0.6
     @State private var opacity = 0.5
+    let firestoreController = FireStoreController()
     var body: some View {
         if(isMainViewActive)
         {
@@ -40,8 +41,18 @@ struct SplashScreenView: View {
                 }
             }
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    self.isMainViewActive = true
+                firestoreController.getTodayData() { (stepsData, ref) in
+                    if let _ : [String: Any] = stepsData {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                            self.isMainViewActive = true
+                        }
+                    } else {
+                        let data: stepsDataType = stepsDataType(date: Date.now.formatted(date: .complete, time: .omitted), steps: 0, goal: 5000)
+                        firestoreController.saveData(data: data)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                            self.isMainViewActive = true
+                        }
+                    }
                 }
             }
         }

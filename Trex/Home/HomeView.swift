@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @ObservedObject var pedometerController = PedometerController()
-    @State private var intialStepsGoals = 5000
+    let firestoreController = FireStoreController()
+    @State var dailyGoal: Int = 5000
 
     var body: some View {
         VStack {
@@ -23,7 +24,7 @@ struct HomeView: View {
                         .padding(20)
                     Text("Your Daily Goal").padding()
                         .padding(.bottom, 10)
-                    Text("5000")
+                    Text(dailyGoal, format: .number)
                 }
                 .font(.title)
                 .multilineTextAlignment(.center)
@@ -65,6 +66,17 @@ struct HomeView: View {
         }
         .padding()
         .navigationTitle("Home Page")
+        .onAppear() {
+            firestoreController.getTodayData() { (stepsData, ref) in
+                if let data: [String: Any] = stepsData {
+                    self.dailyGoal = data["goal"]! as! Int
+                } else {
+                    self.dailyGoal = 5000
+                }
+                let data: stepsDataType = stepsDataType(date: Date.now.formatted(date: .complete, time: .omitted), steps: self.pedometerController.steps, goal: self.dailyGoal)
+                firestoreController.saveData(data: data)
+            }
+        }
     }
 
     struct HomeView_Previews: PreviewProvider {

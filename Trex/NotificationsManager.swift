@@ -5,36 +5,32 @@
 //  Created by Kartik Chawla on 2022-10-05.
 //
 
-
 import Foundation
 import NotificationCenter
 
-//MARK: - Notificaitons Manager Class
+// MARK: - Notificaitons Manager Class
+
 class NotificationsManager {
-    
-    //MARK: - Static Functions
+    // MARK: - Static Functions
     
     /// This function is used to generate notifications using a title and description
-    static func generateNotification(title: String, description: String)  {
-        
+    static func generateNotification(title: String, description: String, hour: Int) {
         // Creating Mutable notifications content to add title and description.
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = description
         content.sound = .default
-        generateNotificationAtSpecificTimeOfTheDay(content: content, hour: 8)
-        
+        generateNotificationAtSpecificTimeOfTheDay(content: content, hour: hour)
     }
     
     /// Function to get user permissions for notification.
     static func requestAuthFromUser() {
-        
         // Instantiating notification Center.
         let notificationCenter = UNUserNotificationCenter.current()
         
         // Requesting the user for notifications access.
         notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) {
-            (granted, error) in
+            granted, error in
             
             // Checking if there is an error or not.
             guard error == nil else {
@@ -44,9 +40,9 @@ class NotificationsManager {
             }
             // If there is no error then this message will print.
             print(granted)
-            
         }
     }
+
     private static func generateNotificationAtSpecificTimeOfTheDay(content: UNNotificationContent, hour: Int) {
         var dateInfo = DateComponents()
         let dateComponents = Calendar.current
@@ -69,11 +65,10 @@ class NotificationsManager {
         
         // Adding a notification Request to the notification center
         notificationCenter.add(request) {
-            (error) in
+            error in
             
             // Checking if there is an error or not.
             guard error == nil else {
-                
                 // If there is an error this message will print and exit the code.
                 print("There is an Error \(String(describing: error))")
                 return
@@ -81,5 +76,9 @@ class NotificationsManager {
             // If there is no error then this message will print.
             print("Notification Generated Successfully")
         }
+    }
+
+    static func cancelAllPendingNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
 }

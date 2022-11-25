@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SetGoalView: View {
     @State var dailyGoal: Int = 5000
-    let setGoalController = SetGoalController()
+    let firestoreController = FireStoreController()
     var body: some View {
         VStack {
             VStack {
@@ -32,10 +32,9 @@ struct SetGoalView: View {
             .padding()
             .padding(.bottom, 30)
                 Button {
-                    print(self.dailyGoal)
                     // Code here
                     let data: stepsDataType = stepsDataType(date: Date.now.formatted(date: .complete, time: .omitted), steps: 0, goal: dailyGoal)
-                    setGoalController.saveData(data: data)
+                    firestoreController.saveData(data: data)
                 } label: {
                     Text("Change Goal")
                         .font(.title)
@@ -56,18 +55,14 @@ struct SetGoalView: View {
         .padding()
         .navigationTitle("Set Your Goals")
         .onAppear {
-            setGoalController.getTodayData() { (data) in
-                self.dailyGoal = data?.goal ?? 5000
-                print("check")
-                print(self.dailyGoal)
+            firestoreController.getTodayData() { (stepsData, ref) in
+                if let data: [String: Any] = stepsData {
+                    self.dailyGoal = data["goal"]! as! Int
+                } else {
+                    self.dailyGoal = 5000
+                }
             }
         }
     }
 }
 
-//struct SetGoalView_Previews: PreviewProvider {
-//    @State private var intialStepsGoals = 5000
-//    static var previews: some View {
-////        SetGoalView(dailyGoal: $intialStepsGoals)
-//    }
-//}

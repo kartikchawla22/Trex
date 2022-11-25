@@ -24,7 +24,6 @@ struct ComponentsView_Previews: PreviewProvider {
     }
 }
 
-
 struct LogoImageView: View {
     var body: some View {
         Image("AppIconSet")
@@ -48,50 +47,31 @@ struct WelcomeTextView: View {
 }
 
 struct TrackStepsCell: View {
+    @Binding var date: String
+    @Binding var goal: String
+    @Binding var steps: String
     var body: some View {
-        VStack{
-            HStack {
-                Group {
-                    Text(Date.now, style: .date).multilineTextAlignment(.center)
-                    Spacer()
-                    Divider()
-                }
-                Group {
-                    Spacer()
-                    Text("5000").multilineTextAlignment(.center)
-                    Spacer()
-                    Divider()
-                }
-                Group {
-                    Spacer()
-                    Text("5000").multilineTextAlignment(.center)
-                    Spacer()
-                }
-            }
+        VStack {
+            HStack(alignment: .center) {
+                Text(date)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 130.0, alignment: .center)
+                Divider()
+                Text(goal)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 75, alignment: .center)
+                Divider()
+                Text(steps)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 75, alignment: .center)
+            }.fixedSize(horizontal: true, vertical: false)
         }
     }
 }
+
 struct StepsIdentifiable: Identifiable {
     let id = UUID()
-    let date: Date
-    let steps: String
-    let goal: String
-}
-
-
-struct TrackStepsCell_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-            TrackStepsCell()
-        }.padding().previewLayout(.fixed(width: 300, height: 100))
-    }
+    var date: String
+    var steps: String
+    var goal: String
 }
