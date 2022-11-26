@@ -29,10 +29,12 @@ struct SignupView: View {
                     .background(Color(.secondarySystemBackground))
 
                 Button(action: {
-                    guard !email.isEmpty, !password.isEmpty else {
-                        return
+                    if(email.isEmpty || password.isEmpty){
+                        viewModel.errorMessage = "Both Fields are Mandatory"
+                        viewModel.showAlert = true
+                    }else {
+                        viewModel.signUp(email: email, password: password)
                     }
-                    viewModel.signUp(email: email, password: password)
                 }, label: {
                     Text("Create Account")
                         .foregroundColor(Color.white)
@@ -40,6 +42,14 @@ struct SignupView: View {
                         .cornerRadius(8)
                         .background(Color.blue)
                 })
+                .alert("Attention", isPresented: $viewModel.showAlert){
+                    Button("OK"){ viewModel.errorMessage = ""
+                        viewModel.showAlert = false
+                    }
+                }
+            message:{
+            Text(viewModel.errorMessage)
+            }
             }
             .padding()
             .navigationTitle("Create Account")
