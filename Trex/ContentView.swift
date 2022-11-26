@@ -5,8 +5,8 @@
 //  Created by Kartik Chawla on 2022-10-27.
 //
 
-import SwiftUI
 import CoreMotion
+import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var pedometerController = PedometerController()

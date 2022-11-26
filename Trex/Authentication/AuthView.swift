@@ -11,7 +11,7 @@ import SwiftUI
 struct AuthView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @ObservedObject var pedometerController = PedometerController()
-    
+
     var body: some View {
         NavigationView {
             if viewModel.signedIn {

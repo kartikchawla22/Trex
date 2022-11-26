@@ -11,9 +11,6 @@ struct SigninView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var heading = "Welcome"
-   
-  
-    
     @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
@@ -27,7 +24,7 @@ struct SigninView: View {
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(5.0)
-                
+
                 SecureField("Password", text: $password)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
@@ -35,15 +32,15 @@ struct SigninView: View {
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(5.0)
             }.padding(.bottom, 75)
+
             Button(action: {
-                if(email.isEmpty || password.isEmpty){
+                if email.isEmpty || password.isEmpty {
                     viewModel.errorMessage = "Both Fields are Mandatory"
                     viewModel.showAlert = true
-                }else {
-                viewModel.signIn(email: email, password: password)
-                    
+                } else {
+                    viewModel.signIn(email: email, password: password)
                 }
-               
+
             }, label: {
                 Text("Sign In")
                     .foregroundColor(Color.white)
@@ -51,21 +48,20 @@ struct SigninView: View {
                     .cornerRadius(8)
                     .background(Color.blue)
             })
-            .alert("Attention", isPresented: $viewModel.showAlert){
-                Button("OK"){ viewModel.errorMessage = ""
+            .alert("Attention", isPresented: $viewModel.showAlert) {
+                Button("OK") { viewModel.errorMessage = ""
                     viewModel.showAlert = false
                 }
             }
-        message:{
-        Text(viewModel.errorMessage)
-        }
+        message: {
+                Text(viewModel.errorMessage)
+            }
             NavigationLink("Create Account", destination: SignupView())
                 .padding()
                 .padding(.bottom, 15)
             NavigationLink("Forgot Password", destination: SignupView())
                 .padding()
         }.padding(10)
-        
     }
 }
 

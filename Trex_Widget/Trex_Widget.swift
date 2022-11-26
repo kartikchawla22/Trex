@@ -5,14 +5,12 @@
 //  Created by Kartik Chawla on 2022-10-27.
 //
 
-import WidgetKit
-import SwiftUI
 import Intents
-
-
+import SwiftUI
+import WidgetKit
 
 struct StepsDataEntry: TimelineEntry {
-    var date: Date = Date()
+    var date: Date = .init()
     var steps: Int
 }
 
@@ -34,8 +32,7 @@ struct Provider: IntentTimelineProvider {
     }
 }
 
-
-struct Trex_WidgetEntryView : View {
+struct Trex_WidgetEntryView: View {
     var entry: Provider.Entry
     var body: some View {
         VStack {

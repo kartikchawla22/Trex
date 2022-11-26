@@ -18,12 +18,12 @@ class FireStoreController {
     @ObservedObject var pedometerController = PedometerController()
     init() {
         let settings = FirestoreSettings()
-        
+
         Firestore.firestore().settings = settings
         // [END setup]
         db = Firestore.firestore()
     }
-    
+
     func saveData(data: stepsDataType) {
         var referrence: DocumentReference?
         getTodayData { stepsData, ref in
@@ -50,9 +50,9 @@ class FireStoreController {
             ]);
         }
     }
-    
-    func getAllData(completion: @escaping (_ stepsData: [[String : Any]]?) -> Void) {
-        var data = [[String : Any]]()
+
+    func getAllData(completion: @escaping (_ stepsData: [[String: Any]]?) -> Void) {
+        var data = [[String: Any]]()
         db.collection(collectionName).whereField("email", isEqualTo: auth.currentUser?.email! ?? "").getDocuments { querySnapshot, err in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -66,9 +66,9 @@ class FireStoreController {
             }
         }
     }
-    
-    func getTodayData(completion: @escaping (_ stepsData: [String : Any]?, _ ref: String?) -> Void) {
-        var data: [String : Any]? = nil
+
+    func getTodayData(completion: @escaping (_ stepsData: [String: Any]?, _ ref: String?) -> Void) {
+        var data: [String: Any]?
         var ref: String? = ""
         db.collection(collectionName).whereField("email", isEqualTo: auth.currentUser?.email! ?? "").whereField("date", isEqualTo: Date.now.formatted(date: .complete, time: .omitted)).getDocuments { querySnapshot, err in
             if let err = err {
@@ -91,5 +91,3 @@ struct stepsDataType {
     var goal: Int
     var email: String? = auth.currentUser?.email
 }
-
-

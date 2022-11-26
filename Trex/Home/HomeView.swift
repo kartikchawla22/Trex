@@ -66,14 +66,14 @@ struct HomeView: View {
         }
         .padding()
         .navigationTitle("Home Page")
-        .onAppear() {
-            firestoreController.getTodayData() { (stepsData, ref) in
+        .onAppear {
+            firestoreController.getTodayData { stepsData, _ in
                 if let data: [String: Any] = stepsData {
                     self.dailyGoal = data["goal"]! as! Int
                 } else {
                     self.dailyGoal = 5000
                 }
-                let data: stepsDataType = stepsDataType(date: Date.now.formatted(date: .complete, time: .omitted), steps: self.pedometerController.steps, goal: self.dailyGoal)
+                let data: stepsDataType = .init(date: Date.now.formatted(date: .complete, time: .omitted), steps: self.pedometerController.steps, goal: self.dailyGoal)
                 firestoreController.saveData(data: data)
             }
         }

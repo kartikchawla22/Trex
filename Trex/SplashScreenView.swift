@@ -13,12 +13,11 @@ struct SplashScreenView: View {
     @State private var opacity = 0.5
     let firestoreController = FireStoreController()
     var body: some View {
-        if(isMainViewActive)
-        {
+        if isMainViewActive {
             let viewModel = AuthViewModel()
             AuthView()
                 .environmentObject(viewModel)
-            
+
         } else {
             VStack {
                 VStack {
@@ -41,13 +40,13 @@ struct SplashScreenView: View {
                 }
             }
             .onAppear {
-                firestoreController.getTodayData() { (stepsData, ref) in
-                    if let _ : [String: Any] = stepsData {
+                firestoreController.getTodayData { stepsData, _ in
+                    if let _: [String: Any] = stepsData {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                             self.isMainViewActive = true
                         }
                     } else {
-                        let data: stepsDataType = stepsDataType(date: Date.now.formatted(date: .complete, time: .omitted), steps: 0, goal: 5000)
+                        let data = stepsDataType(date: Date.now.formatted(date: .complete, time: .omitted), steps: 0, goal: 5000)
                         firestoreController.saveData(data: data)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                             self.isMainViewActive = true
