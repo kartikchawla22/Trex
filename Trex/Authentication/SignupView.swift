@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// this is the sign up page where user will enter the email id and generate a password to access the application.
 struct SignupView: View {
     @State var email = ""
     @State var password = ""

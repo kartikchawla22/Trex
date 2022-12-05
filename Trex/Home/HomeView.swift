@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// this is the main home screen that user will see after login
 struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @ObservedObject var pedometerController = PedometerController()

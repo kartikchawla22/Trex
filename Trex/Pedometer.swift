@@ -9,6 +9,7 @@ import CoreMotion
 import SwiftUI
 import WidgetKit
 
+/// This is the class that handles the CoreMotion's pedometer sensor.
 class PedometerController: ObservableObject {
     private let pedometer: CMPedometer = .init()
     @Published public var steps: Int = 0;
@@ -16,8 +17,10 @@ class PedometerController: ObservableObject {
 
     var storedSteps: Int = 0
 
+    // Checking if pedometer is available.
     private let isPedometerAvailable: Bool = CMPedometer.isDistanceAvailable() && CMPedometer.isPedometerEventTrackingAvailable() && CMPedometer.isStepCountingAvailable()
 
+    // This is called when we initialize this class
     init() {
         if isPedometerAvailable {
             let startOfDay = Calendar.current.startOfDay(for: .now)

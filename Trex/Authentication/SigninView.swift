@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This is the sign in view where user will enter the email/password that user used during sign up process,
 struct SigninView: View {
     @State private var email = ""
     @State private var password = ""

@@ -8,6 +8,7 @@
 import FirebaseAuth
 import SwiftUI
 
+/// This is the view that decides weather user needs to be shown the login page or the home page when the app is launched.
 struct AuthView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @ObservedObject var pedometerController = PedometerController()

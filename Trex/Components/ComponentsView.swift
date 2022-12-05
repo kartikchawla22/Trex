@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Here we are creating components that can be reused.
 struct ComponentsView: View {
     @State private var text = "hello"
     var body: some View {

@@ -9,6 +9,7 @@ import FirebaseAuth
 import Foundation
 import SwiftUI
 
+/// This class handles the login and signup process
 class AuthViewModel: ObservableObject {
     let auth = Auth.auth()
     @Published var signedIn = false
@@ -19,6 +20,7 @@ class AuthViewModel: ObservableObject {
         return auth.currentUser != nil
     }
 
+    /// This function acceps the email and password as params and check if user is authorized to singin or not
     func signIn(email: String, password: String) {
         if showAlert == true {
             return
@@ -40,6 +42,7 @@ class AuthViewModel: ObservableObject {
         }
     }
 
+    /// This function acceps the email and password as params and check if user is able to signup or not
     func signUp(email: String, password: String) {
         auth.createUser(withEmail: email, password: password) { [weak self] result, error in
             guard result != nil, error == nil else {

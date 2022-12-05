@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This view is used to set the daily goal.
 struct SetGoalView: View {
     @State var dailyGoal: Int = 5000
     let firestoreController = FireStoreController()
@@ -38,13 +39,6 @@ struct SetGoalView: View {
             } label: {
                 Text("Change Goal")
                     .font(.title)
-                    .frame(width: 200, height: 50)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(.gray, lineWidth: 2))
-            }.padding()
-            Button {} label: {
-                Text("Cancel")
-                    .font(.title)
-                    .foregroundColor(.red)
                     .frame(width: 200, height: 50)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(.gray, lineWidth: 2))
             }.padding()

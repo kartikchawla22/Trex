@@ -42,6 +42,7 @@ struct Trex_WidgetEntryView: View {
     }
 }
 
+/// This is the widget that we implemented to show the user's current total steps and today's date.
 @main
 struct Trex_Widget: Widget {
     let kind: String = "Trex_Widget"

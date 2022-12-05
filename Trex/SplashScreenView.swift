@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This is the main splash screen view, After the splash screen is done we open the authView page from here.
 struct SplashScreenView: View {
     @State private var isMainViewActive = false
     @State private var size = 0.6
@@ -33,6 +34,7 @@ struct SplashScreenView: View {
                 .scaleEffect(size)
                 .opacity(opacity)
                 .onAppear {
+                    // Splash screen animation will only last for 1.2 seconds, after that we open the AuthView page.
                     withAnimation(.easeIn(duration: 1.2)) {
                         self.size = 0.8
                         self.opacity = 1.0

@@ -11,7 +11,9 @@ import FirebaseFirestore
 import Foundation
 import SwiftUI
 
+// Initializing the user Auth data after login.
 let auth = Auth.auth()
+/// This is the class which handles all the firestore implementation.
 class FireStoreController {
     private var db: Firestore!
     private let collectionName = "StepsData"
@@ -24,6 +26,7 @@ class FireStoreController {
         db = Firestore.firestore()
     }
 
+    // Saving the user's pedometer data in firestore
     func saveData(data: stepsDataType) {
         var referrence: DocumentReference?
         getTodayData { stepsData, ref in
@@ -50,7 +53,9 @@ class FireStoreController {
             ]);
         }
     }
-
+    
+    
+    // Fetching all the user's pedometer data from firestore
     func getAllData(completion: @escaping (_ stepsData: [[String: Any]]?) -> Void) {
         var data = [[String: Any]]()
         db.collection(collectionName).whereField("email", isEqualTo: auth.currentUser?.email! ?? "").getDocuments { querySnapshot, err in
@@ -67,6 +72,7 @@ class FireStoreController {
         }
     }
 
+    // Fetching the user's pedometer data for current day from firestore
     func getTodayData(completion: @escaping (_ stepsData: [String: Any]?, _ ref: String?) -> Void) {
         var data: [String: Any]?
         var ref: String? = ""

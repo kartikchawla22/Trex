@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This View is used to show user's pedometer data in a list format with date, number of steps and the goal for that day.
 struct TrackStepsView: View {
     let firestoreController = FireStoreController()
     @State private var arr: [StepsIdentifiable] = []
