@@ -59,9 +59,6 @@ struct SigninView: View {
             }
             NavigationLink("Create Account", destination: SignupView())
                 .padding()
-                .padding(.bottom, 15)
-            NavigationLink("Forgot Password", destination: SignupView())
-                .padding()
         }.padding(10)
     }
 }

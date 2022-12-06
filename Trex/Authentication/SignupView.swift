@@ -42,6 +42,7 @@ struct SignupView: View {
                         .frame(width: 200, height: 50)
                         .cornerRadius(8)
                         .background(Color.blue)
+                        .padding()
                 })
                 .alert("Attention", isPresented: $viewModel.showAlert) {
                     Button("OK") {
